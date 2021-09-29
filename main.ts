@@ -74,9 +74,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.ball, function (sprite, otherSpr
     if (sprite == left_paddle) {
         otherSprite.left = sprite.right
         info.changeScoreBy(1)
+        music.knock.play()
     } else {
         otherSprite.right = sprite.left
         info.player2.changeScoreBy(1)
+        music.knock.play()
     }
 })
 let right_paddle: Sprite = null
